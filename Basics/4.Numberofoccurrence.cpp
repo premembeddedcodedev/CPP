@@ -7,7 +7,8 @@ using namespace std;
 class solution {
 	public:
 		int count(int arr[], int n, int x) {
-					
+			
+			return 0;			
 		}
 };
 

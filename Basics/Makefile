@@ -34,4 +34,4 @@ all: 2.main.o 4.Numberofoccurrence.o
 #Square.o: Square.h Point.h
 
 clean:
-	rm main Numberofoccurrence
+	rm main Numberofoccurrence 2.main.o 4.Numberofoccurrence.o
