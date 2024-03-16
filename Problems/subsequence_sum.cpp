@@ -5,9 +5,14 @@ using namespace std;
 void getsubseq(int offset, vector<int> &seq_nums, int data[], int length, int sum)
 {
 	if(offset == length) {
+		int temp_sum = 0;
 		for(auto it : seq_nums) {
 			cout << it << " ";
+			temp_sum += it;
 		}
+
+		if(temp_sum == sum)
+			cout << "found sum : " << sum;
 
 		cout << "\n";
 		return;
