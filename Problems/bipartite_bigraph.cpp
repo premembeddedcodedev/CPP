@@ -1,13 +1,19 @@
 #include<iostream>
 #include<set>
 #include<vector>
+#include<queue>
 
 using namespace std;
 
-void parition(vector<int> ctlist[n], int edges)
+void parition(int offset, vector<int> ctlist[], int edges)
 {
+	queue<int> q;
+	
+	q.push(offset);
+	
+#if 0
 	set<int> s, t;
-	s.insert(10);
+	//s.insert(10);
 
 	for(int i=1; i<n; i++) {
 		cout << i << "->";
@@ -16,8 +22,7 @@ void parition(vector<int> ctlist[n], int edges)
 		}
 		cout << "\n";
 	}
-
-
+#endif
 }
 
 int main()
@@ -42,7 +47,7 @@ int main()
 		cout << "\n";
 	}
 
-	parition(ctlist, e);
+	parition(1, ctlist, e);
 
 	return 0;
 }
