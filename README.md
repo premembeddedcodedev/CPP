@@ -1,7 +1,7 @@
 # CPP
 
 Reference: https://www.softwaretestinghelp.com/cpp-makefile-tutorial/
-
+https://leimao.github.io/blog/CPP-Dynamic-Memory-Management/
 String functions and String iterators
 
 concepts to learn:
