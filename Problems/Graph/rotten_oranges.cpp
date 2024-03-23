@@ -1,10 +1,10 @@
 #include<iostream>
 
-using namespace std;
-
 int main()
 {
-	int 
+	vector<vector<int>> data;
+
+
 
 	return 0;
 }
