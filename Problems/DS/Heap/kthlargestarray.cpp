@@ -4,7 +4,7 @@ using namespace std;
 
 int main()
 {
-	int 
+	int check; 
 
 	return 0;
 }
