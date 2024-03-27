@@ -14,28 +14,21 @@ vector<string> split(const string &);
  */
 
 int hourglassSum(vector<vector<int>> arr) {
-	int min = INT_MAX;
+	int min = INT_MIN;
 
 	for(int i=0; i<arr.size(); i++) {
-		for(int j=0; j<arr[0].size(); j++) {
-			sum = 0;
-			if(((i - 1) < 0) || ((i+1) > arr.size()) || ((j-1) < 0) || ((j+1) > arr[0].size()))
-				goto done;
-			int k = arr[i] + arr[j];	
-			int l = arr[i-1][j-1];
-			int m = arr[i-1][j];
-			int n = arr[i-1][j+1];
-			int o = arr[i+1][j-1];
-			int p = arr[i+1][j];
-			int r = arr[i+1][j-1];
-			sum = k + l + m + n + o + p + r;
-			if(min > sum) {
-				min = sum;
+		if(i>=4)
+			continue;
+		for(int j = 0; j < arr[0].size(); j++) {
+			int sum = 0;
+			if(j < 4) {
+				sum = arr[i][j] + arr[i][j+1] + arr[i][j+2] + arr[i+1][j+1] + arr[i+2][j] + arr[i+2][j+1] + arr[i+2][j+2];
+				if(min < sum)
+					min = sum;
 			}
 		}
-		cout << "\n";
 	}
-done:
+
 	return min;
 }
 
@@ -62,7 +55,7 @@ int main()
 
 	int result = hourglassSum(arr);
 
-	fout << result << "\n";
+	cout << result << "\n";
 
 	fout.close();
 
